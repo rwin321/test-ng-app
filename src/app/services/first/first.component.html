@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-md-12" style="background-color: lightgreen;height: 40vh">
+    <h4>First Component</h4>
+    <div class="row">
+      <select name="select" id="select-1" [(ngModel)]="shape" style="margin: 2rem;padding: .5rem">
+        <option selected disabled hidden value="">select the shape</option>
+        <option value="square">square</option>
+        <option value="circle">circle</option>
+      </select>
+      <select name="select" id="select-2" [(ngModel)]="color" style="margin: 2rem;padding: .5rem">
+        <option selected disabled hidden value="">select the color</option>
+        <option value="red">red</option>
+        <option value="blue">blue</option>
+        <option value="black">black</option>
+        <option value="yellow">yellow</option>
+      </select>
+      <button class="btn btn-primary p-2" (click)="displayFigure()" style="padding: 1rem">Draw</button>
+    </div>
+    <div class="output {{shapeClass}}"></div>
+  </div>
+</div>
