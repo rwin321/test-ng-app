@@ -1,0 +1,14 @@
+<!-- <div>
+    <h2>Child component</h2>
+    <p>Parent output: {{transferedValue}}</p>
+</div>
+<div class="col-12-md">
+    <p>Child input</p>
+    <input type="text" (input)="transferDataToParent($event)">
+</div> -->
+<div class="array-values">
+    <div *ngFor="let val of testValues">
+        <p *ngIf="chosenType === val.type" (click)="sendArrValueToParent(val.name)">{{val.name}}</p>
+        <p *ngIf="!chosenType" (click)="sendArrValueToParent(val.name)">{{val.name}}</p>
+    </div>
+</div>

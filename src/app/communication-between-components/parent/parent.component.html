@@ -1,0 +1,26 @@
+<!-- <div>
+    <h2>Parent component</h2>
+    <input type="text" [(ngModel)]="transferValue">
+    <p>Child output: </p>
+    <p>{{childInputVal}}</p>
+</div>
+<app-child [transferedValue]="transferValue" (transferDataEmitter)="getTransferedValue($event)"></app-child> -->
+
+<div class="col">
+  <button class="btn btn-success" (click)="handleChooseArrayValue('color')">
+    colors
+  </button>
+  <button class="btn btn-success" (click)="handleChooseArrayValue('fruit')">
+    fruits
+  </button>
+  <button class="btn btn-success" (click)="handleChooseArrayValue('animal')">
+    animals
+  </button>
+</div>
+<div class="col">
+  <h2>chosen value name: {{ sentArrValueName }}</h2>
+</div>
+<app-child
+  [chosenType]="typeArrayValue"
+  (sendArrValName)="getArrValeName($event)"
+></app-child>

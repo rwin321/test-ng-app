@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ng-test-app';
+  count: number = 0
+  imagepath: string = 'assets/nature-1.jpg'
+
+  addCount = (): void => {
+    this.count += 1
+  }
+
+  passValueToComponent = (e: any) => {
+    console.log(e.target.value);
+  }
 }

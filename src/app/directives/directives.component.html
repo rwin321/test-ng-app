@@ -1,0 +1,74 @@
+<!-- <div class="row">
+    <h2>Structural derectives - ngIf</h2>
+    <div class="col-md-12">
+        <button class="btn btn-success" (click)="handleToggle(false)">success</button>
+        <button class="btn btn-danger" (click)="handleToggle(true)">danger</button>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p *ngIf="!toggle">Be careful, there is a danger</p>
+            <p *ngIf="toggle">Horrey, there is a success</p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <h2>Structural derectives - ngFor</h2>
+    <div class="col-md-12">
+        <div *ngFor="let number of numbers">
+            <p *ngIf="number.includes('o')">{{number}}</p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <h2>Structural derectives - ngSwitch</h2>
+    <input type="number" [(ngModel)]="selectedValue">
+    <div [ngSwitch]="selectedValue">
+        <p *ngSwitchCase="2">second</p>
+        <p *ngSwitchCase="4">fourth</p>
+        <p *ngSwitchCase="5">fifth</p>
+        <p *ngSwitchDefault>no such value</p>
+    </div>
+</div>
+
+<div class="row">
+    <h2>Attribute Directives - ngClass</h2>
+    <div class="col-md-12">
+        <h4 [ngClass]="{
+            red: highlightColor === 'red',
+            green: highlightColor === 'green',
+            blue: highlightColor === 'blue'
+        }">click the button to highlight me</h4>
+        <div class="col-md-12">
+            <button class="btn btn-danger" (click)="highlight('red')">Red</button>
+            <button class="btn btn-success" (click)="highlight('green')">Green</button>
+            <button class="btn btn-primary" (click)="highlight('blue')">Blue</button>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <h2>Attribute Directives - ngStyle</h2>
+    <div class="col-md-12">
+
+    </div>
+</div> -->
+
+<div class="main">
+    <div class="buttons">
+        <button class="btn btn-primary" (click)="choseDivisionTypeNumbers(2)">divsed by 2</button>
+        <button class="btn btn-success" (click)="choseDivisionTypeNumbers(3)">divsed by 3</button>
+        <button class="btn btn-primary" (click)="choseDivisionTypeNumbers(5)">divsed by 5</button>
+        <button class="btn btn-success" (click)="choseDivisionTypeNumbers(10)">divsed by 10</button>
+        <button class="btn btn-danger" (click)="choseDivisionTypeNumbers(0)">clear</button>
+    </div>
+    <div class="numbers">
+        <p *ngFor="let number of numbersArr">
+            <span [ngStyle]="{
+                color: (number + 1) % chosenDivison === 0 ? 'blue' : 'black',
+                backgroundColor: (number + 1) % chosenDivison === 0 ? 'red' : 'white'
+            }">{{number + 1}}</span>
+        </p>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+.main {
+    display: flex;
+}
+.buttons {
+    width: 40%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    & button {
+        position: relative;
+        right: 0;
+        width: 50%;
+    }
+}
+
+.numbers {
+    width: 40%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    & p > span {
+        padding: 10px;
+    }
+}
+
+button {
+    padding: 20px;
+    margin: 30px;
+}
+
+h4 {
+    overflow: hidden;
+}
+
+.red {
+    background-color: red;
+    &:hover {
+        transform: scale(1.2);
+        transition: 1.2s;
+    }
+}
+.green {
+    background-color: green;
+    &:hover {
+        transform: scale(1.2);
+        transition: 1.2s;
+    }
+}
+
+.blue {
+    background-color: blue;
+    &:hover {
+        transform: scale(1.2);
+        transition: 1.2s;
+    }
+}
